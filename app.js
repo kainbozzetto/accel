@@ -37,9 +37,9 @@ serialport.on('open', function() {
 		var parsedData = data.slice(0, data.length-1).split(',');
 
 		io.emit('accel', { 
-			gx: convertAccel(parsedData[0]), 
-			gy: convertAccel(parsedData[1]),
-			gz: convertAccel(parsedData[2])
+			x: convertAccel(parsedData[0]), 
+			y: convertAccel(parsedData[1]),
+			z: convertAccel(parsedData[2])
 		});
 	});
 });
