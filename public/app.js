@@ -6,9 +6,9 @@ app.factory('mySocket', function(socketFactory) {
 
 app.controller('AppCtrl', function($scope, mySocket) {
 	$scope.accel = {
-		gx: 0,
-		gy: 0,
-		gz: 0
+		x: 0,
+		y: 0,
+		z: 0
 	};
 
 	mySocket.on('accel', function(data) {
