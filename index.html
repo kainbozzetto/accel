@@ -1,0 +1,25 @@
+<!doctype>
+<html>
+	<head>
+		<script src='bower_components/angular/angular.min.js'></script>
+		<script src='bower_components/socket.io-client/socket.io.js'></script>
+		<script src='bower_components/angular-socket-io/socket.js'></script>
+		<script src='app.js'></script>
+		<link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.min.css'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+	</head>
+	<body ng-app='app'>
+		<div class='container'>
+			<div class='panel panel-info' ng-controller='AppCtrl'>
+				<div class='panel-heading'>
+					<h2 class='panel-title'>Acceleration Data</h2>
+				</div>
+				<ul class='list-group'>
+					<li class='list-group-item'>gx: {{accel.gx | number: 2}}g</li>
+					<li class='list-group-item'>gy: {{accel.gy | number: 2}}g</li>
+					<li class='list-group-item'>gz: {{accel.gz | number: 2}}g</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
